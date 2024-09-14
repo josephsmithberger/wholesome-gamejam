@@ -12,29 +12,31 @@
 [node name="desk" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 sorting_offset = -4.0
+flip_h = true
 texture = ExtResource("1_1adp6")
 
 [node name="lamp" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558, 1.00078, 2.58579, -3.12354)
+transform = Transform3D(0.82, 0, 0, 0, 0.0714678, 0.81688, 0, -0.81688, 0.0714678, 3.99177, 4.643, -0.357335)
 texture = ExtResource("2_aee2q")
 
 [node name="pencil" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.2, 2.921)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.63266, 0.2, 2.921)
 texture = ExtResource("3_2hhkf")
 
 [node name="plant" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0.447412, -0.197191, -4.32731)
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -1.15223, -0.197191, -4.03271)
 texture = ExtResource("4_f8vq7")
 
 [node name="picture" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, -0.195532, -1.10368, -3.818)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, -4.47934, -0.149797, -3.54438)
+flip_h = true
 texture = ExtResource("5_1f5ky")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38398, 1.80416, -4.09332)
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 8.8, 3.489)
-fov = 62.8
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 12.0043, 5.14528)
+fov = 44.2
 script = ExtResource("6_28gy6")
 intensity = 0.001
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38398, 3.86137, -4.09332)

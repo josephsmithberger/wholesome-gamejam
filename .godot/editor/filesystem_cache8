@@ -1,15 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726277308
+::res://::1726311053
+export_presets.cfg::TextFile::-1::1726278922::0::1::::<><>::
 icon.svg::CompressedTexture2D::6087940451613588006::1726171740::1726277310::1::::<><>::
 README.md::TextFile::-1::1726172040::0::1::::<><>::
-::res://assets/::1726277026
-::res://assets/desk/::1726276835
+::res://assets/::1726311053
+::res://assets/desk/::1726310986
 cam_tilt.gd::GDScript::-1::1726276668::0::1::::<>Camera3D<>::
-desk.png::CompressedTexture2D::6831979900460998871::1726274355::1726277310::1::::<><>::
-desk.tscn::PackedScene::7751098887541388876::1726276835::0::1::::<><>::uid://c4lpyfxecid6n::::res://assets/desk/desk.png<>uid://b020bmyygqypu::::res://assets/desk/lamp.png<>uid://b4j8md2b5snx1::::res://assets/desk/pencil.png<>uid://d3req2cqbl2jk::::res://assets/desk/desk_plant.png<>uid://d0njcx0tmcypq::::res://assets/desk/picture_frame.png<>res://assets/desk/cam_tilt.gd
-desk_plant.png::CompressedTexture2D::9159916957385600016::1726274355::1726277310::1::::<><>::
-lamp.png::CompressedTexture2D::4198400353071224146::1726274355::1726277310::1::::<><>::
-pencil.png::CompressedTexture2D::4442501838636748716::1726274355::1726277310::1::::<><>::
-picture_frame.png::CompressedTexture2D::8941371324892177502::1726274355::1726277310::1::::<><>::
-::res://assets/window+outside/::1726274577
-window_frame.png::CompressedTexture2D::116374042026020467::1726274355::1726277310::1::::<><>::
+desk.png::CompressedTexture2D::6831979900460998871::1726310575::1726311151::1::::<><>::
+desk.tscn::PackedScene::7751098887541388876::1726310283::0::1::::<><>::uid://c4lpyfxecid6n::::res://assets/desk/desk.png<>uid://b020bmyygqypu::::res://assets/desk/lamp.png<>uid://b4j8md2b5snx1::::res://assets/desk/pencil.png<>uid://d3req2cqbl2jk::::res://assets/desk/desk_plant.png<>uid://d0njcx0tmcypq::::res://assets/desk/picture_frame.png<>res://assets/desk/cam_tilt.gd
+desk_plant.png::CompressedTexture2D::9159916957385600016::1726310760::1726311151::1::::<><>::
+lamp.png::CompressedTexture2D::4198400353071224146::1726310809::1726311151::1::::<><>::
+pencil.png::CompressedTexture2D::4442501838636748716::1726310886::1726311151::1::::<><>::
+picture_frame.png::CompressedTexture2D::8941371324892177502::1726310983::1726311151::1::::<><>::
+::res://assets/title screen/::1726310283
+button.gd::GDScript::-1::1726278525::0::1::::<>Button<>::
+title_screen.tscn::PackedScene::2136169096106158815::1726310283::0::1::::<><>::res://assets/title screen/button.gd
+::res://assets/window+outside/::1726311053
+window_frame.png::CompressedTexture2D::116374042026020467::1726311050::1726311151::1::::<><>::
