@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgve01giuriju"]
+
+[ext_resource type="Script" path="res://assets/puzzles/pickable_property.gd" id="1_in4ro"]
+
+[node name="pickable_property" type="Area3D"]
+input_capture_on_drag = true
+script = ExtResource("1_in4ro")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

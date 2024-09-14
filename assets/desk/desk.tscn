@@ -1,13 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://dioxp37vm2baq"]
+[gd_scene load_steps=9 format=3 uid="uid://dioxp37vm2baq"]
 
 [ext_resource type="Texture2D" uid="uid://c4lpyfxecid6n" path="res://assets/desk/desk.png" id="1_1adp6"]
+[ext_resource type="PackedScene" uid="uid://ckih2qo6tacel" path="res://assets/window+outside/window.tscn" id="1_sia72"]
 [ext_resource type="Texture2D" uid="uid://b020bmyygqypu" path="res://assets/desk/lamp.png" id="2_aee2q"]
 [ext_resource type="Texture2D" uid="uid://b4j8md2b5snx1" path="res://assets/desk/pencil.png" id="3_2hhkf"]
 [ext_resource type="Texture2D" uid="uid://d3req2cqbl2jk" path="res://assets/desk/desk_plant.png" id="4_f8vq7"]
 [ext_resource type="Texture2D" uid="uid://d0njcx0tmcypq" path="res://assets/desk/picture_frame.png" id="5_1f5ky"]
 [ext_resource type="Script" path="res://assets/desk/cam_tilt.gd" id="6_28gy6"]
 
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_m8775"]
+stream_count = 3
+stream_0/volume = 0.0
+stream_1/volume = 0.0
+stream_2/volume = 0.0
+
 [node name="desk" type="Node3D"]
+
+[node name="window" parent="." instance=ExtResource("1_sia72")]
+transform = Transform3D(1.37, 0, 0, 0, -5.98846e-08, -1.37, 0, 1.37, -5.98846e-08, 0, 0, -9.64108)
 
 [node name="desk" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -20,15 +30,15 @@ transform = Transform3D(0.82, 0, 0, 0, 0.0714678, 0.81688, 0, -0.81688, 0.071467
 texture = ExtResource("2_aee2q")
 
 [node name="pencil" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.63266, 0.2, 2.921)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.633, 0.3, 2.801)
 texture = ExtResource("3_2hhkf")
 
 [node name="plant" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -1.15223, -0.197191, -4.03271)
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -1.15223, 0.939615, -4.03271)
 texture = ExtResource("4_f8vq7")
 
 [node name="picture" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, -4.47934, -0.149797, -3.54438)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, -4.47934, 0.966061, -3.54438)
 flip_h = true
 texture = ExtResource("5_1f5ky")
 
@@ -40,3 +50,6 @@ intensity = 0.001
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38398, 3.86137, -4.09332)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamSynchronized_m8775")

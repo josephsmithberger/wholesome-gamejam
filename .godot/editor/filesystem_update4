@@ -1,2 +1,7 @@
 res://assets/title screen/title_screen.tscn
 res://assets/desk/desk.tscn
+res://assets/desk/cam_tilt.gd
+res://assets/desk/tilt.gdshader
+res://assets/window+outside/window.tscn
+res://assets/puzzles/pickable_property.gd
+res://assets/puzzles/pickable_property.tscn

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckih2qo6tacel"]
+
+[ext_resource type="Texture2D" uid="uid://bwmws8aprfmp" path="res://assets/window+outside/window_frame.png" id="1_2rcy3"]
+
+[node name="window" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.642788, -0.766044, 0, 0.766044, 0.642788, 0, 1.46148, 0)
+texture = ExtResource("1_2rcy3")
