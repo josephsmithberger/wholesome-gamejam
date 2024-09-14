@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwswov2os56ep"]
+
+[ext_resource type="Material" uid="uid://5y4b8fecl64j" path="res://assets/3d props/mat_desk_3d.tres" id="1_ql2la"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_crp23"]
+material = ExtResource("1_ql2la")
+size = Vector2(12, 8.225)
+
+[node name="Desk3d" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_crp23")

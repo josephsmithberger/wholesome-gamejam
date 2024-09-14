@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwanf55yidhvj"]
+
+[ext_resource type="Texture2D" uid="uid://b020bmyygqypu" path="res://assets/desk/lamp.png" id="1_b1sju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqkxg"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_b1sju")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eatss"]
+material = SubResource("StandardMaterial3D_mqkxg")
+size = Vector2(7, 8)
+
+[node name="Lamp3d" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_eatss")

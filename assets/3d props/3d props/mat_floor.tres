@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dayc5kf5754rx"]
+
+[ext_resource type="Texture2D" uid="uid://dqjkfufgb3rf" path="res://assets/3d props/floor_wooden.png" id="1_bwd23"]
+[ext_resource type="Texture2D" uid="uid://dmsbqfv78d2ms" path="res://assets/3d props/floor_wooden_n.png" id="2_qk8im"]
+[ext_resource type="Texture2D" uid="uid://c827t3en7cygx" path="res://assets/3d props/floor_wooden_r.png" id="3_0fllw"]
+
+[resource]
+albedo_texture = ExtResource("1_bwd23")
+metallic = 0.3
+metallic_specular = 0.51
+roughness = 0.95
+roughness_texture = ExtResource("3_0fllw")
+normal_enabled = true
+normal_scale = 2.5
+normal_texture = ExtResource("2_qk8im")
+uv1_scale = Vector3(3, 3, 3)
