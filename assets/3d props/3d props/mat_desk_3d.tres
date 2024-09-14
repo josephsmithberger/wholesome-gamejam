@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://5y4b8fecl64j"]
+
+[ext_resource type="Texture2D" uid="uid://c4lpyfxecid6n" path="res://assets/desk/desk.png" id="1_omer6"]
+[ext_resource type="Texture2D" uid="uid://cfet1ofnyurh5" path="res://assets/3d props/desk_n.png" id="2_8fvpa"]
+[ext_resource type="Texture2D" uid="uid://cjjj5lv0sktij" path="res://assets/3d props/desk_r.png" id="3_ok1lv"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_omer6")
+roughness_texture = ExtResource("3_ok1lv")
+normal_enabled = true
+normal_texture = ExtResource("2_8fvpa")

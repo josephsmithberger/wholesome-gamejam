@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc0ldkpfxql2q"]
+
+[ext_resource type="Material" uid="uid://cmlgxld73c4gb" path="res://assets/3d props/mat_plant3d.tres" id="1_rp6v7"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oeu37"]
+material = ExtResource("1_rp6v7")
+size = Vector2(2.25, 3)
+
+[node name="Plant3d" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_oeu37")

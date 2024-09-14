@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://chjnp3lbi750e"]
+
+[ext_resource type="Texture2D" uid="uid://b4j8md2b5snx1" path="res://assets/desk/pencil.png" id="1_rw07y"]
+[ext_resource type="Texture2D" uid="uid://m0gnns4gxnck" path="res://assets/3d props/pencil_n.png" id="2_jseen"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_rw07y")
+metallic = 0.03
+roughness = 0.85
+normal_enabled = true
+normal_scale = 1.14
+normal_texture = ExtResource("2_jseen")
