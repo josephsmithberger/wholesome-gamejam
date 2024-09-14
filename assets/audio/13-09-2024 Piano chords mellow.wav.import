@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cou3igntd5vd1"
+path="res://.godot/imported/13-09-2024 Piano chords mellow.wav-d78d44a8c9542da480526ef1801b4df3.sample"
+
+[deps]
+
+source_file="res://assets/audio/13-09-2024 Piano chords mellow.wav"
+dest_files=["res://.godot/imported/13-09-2024 Piano chords mellow.wav-d78d44a8c9542da480526ef1801b4df3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
