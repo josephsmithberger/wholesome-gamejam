@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dv3dre4kfhpoq"]
+[gd_scene load_steps=24 format=3 uid="uid://dv3dre4kfhpoq"]
 
 [ext_resource type="PackedScene" uid="uid://dwswov2os56ep" path="res://assets/3d props/desk_3d.tscn" id="1_nmlih"]
 [ext_resource type="PackedScene" uid="uid://dc0ldkpfxql2q" path="res://assets/3d props/plant_3d.tscn" id="2_vahvc"]
@@ -10,6 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://bgve01giuriju" path="res://assets/puzzles/pickable_property.tscn" id="7_acdcq"]
 [ext_resource type="PackedScene" uid="uid://dg6mkoca4x0ir" path="res://assets/3d props/pencil_3d.tscn" id="9_bdtqu"]
 [ext_resource type="PackedScene" uid="uid://cvaeu8uyv6g10" path="res://assets/window+outside/outside/outside.tscn" id="10_1qd3i"]
+[ext_resource type="AudioStream" uid="uid://blrsnmsvlblvo" path="res://assets/audio/13-09-2024 master.mp3" id="11_8gywy"]
+[ext_resource type="AudioStream" uid="uid://4box3s4eohxp" path="res://assets/audio/13-09-2024 perc.mp3" id="12_2kht3"]
+[ext_resource type="AudioStream" uid="uid://1bevj1p6reep" path="res://assets/audio/13-09-2024 piano chords mellow.mp3" id="13_n4dhg"]
+[ext_resource type="AudioStream" uid="uid://xjw5m51r0hti" path="res://assets/audio/13-09-2024 piano chords.mp3" id="14_qqfwk"]
+[ext_resource type="AudioStream" uid="uid://cj2l4qa4mhftb" path="res://assets/audio/13-09-2024 piano solo.mp3" id="15_igs4w"]
+[ext_resource type="AudioStream" uid="uid://chuelsqxy1oej" path="res://assets/audio/13-09-2024 synth arp.mp3" id="16_cdgqj"]
+[ext_resource type="AudioStream" uid="uid://balx6mlm1w67i" path="res://assets/audio/13-09-2024 synth bass.mp3" id="17_6y42d"]
+[ext_resource type="AudioStream" uid="uid://bnhxisrpgw6ht" path="res://assets/audio/13-09-2024 synth chords.mp3" id="18_n8i4s"]
+[ext_resource type="AudioStream" uid="uid://c7on3tgf8ep5b" path="res://assets/audio/13-09-2024 trumpet.mp3" id="19_3ns0o"]
 
 [sub_resource type="Environment" id="Environment_cjsaa"]
 background_mode = 1
@@ -31,6 +40,27 @@ height = 3.09315
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r7pj8"]
 size = Vector2(8.605, 11.46)
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_nc8wu"]
+stream_count = 9
+stream_0/stream = ExtResource("11_8gywy")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("12_2kht3")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("13_n4dhg")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("14_qqfwk")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("15_igs4w")
+stream_4/volume = 0.0
+stream_5/stream = ExtResource("16_cdgqj")
+stream_5/volume = 0.0
+stream_6/stream = ExtResource("17_6y42d")
+stream_6/volume = 0.0
+stream_7/stream = ExtResource("18_n8i4s")
+stream_7/volume = 0.0
+stream_8/stream = ExtResource("19_3ns0o")
+stream_8/volume = 0.0
 
 [node name="DeskScene" type="Node3D"]
 
@@ -88,3 +118,6 @@ intensity = 0.001
 
 [node name="outside" parent="." instance=ExtResource("10_1qd3i")]
 transform = Transform3D(1, 0, 0, 0, 0.695587, 0.718442, 0, -0.718442, 0.695587, 0.5, -28, -30)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamSynchronized_nc8wu")

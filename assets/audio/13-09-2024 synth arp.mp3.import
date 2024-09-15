@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chuelsqxy1oej"
+path="res://.godot/imported/13-09-2024 synth arp.mp3-40e85c9483e56b952ab40107967abd23.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/13-09-2024 synth arp.mp3"
+dest_files=["res://.godot/imported/13-09-2024 synth arp.mp3-40e85c9483e56b952ab40107967abd23.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

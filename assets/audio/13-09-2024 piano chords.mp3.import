@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xjw5m51r0hti"
+path="res://.godot/imported/13-09-2024 piano chords.mp3-48facf7cccd4d56a28703310ff7a20f9.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/13-09-2024 piano chords.mp3"
+dest_files=["res://.godot/imported/13-09-2024 piano chords.mp3-48facf7cccd4d56a28703310ff7a20f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
