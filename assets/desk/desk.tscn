@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dioxp37vm2baq"]
+[gd_scene load_steps=18 format=3 uid="uid://dioxp37vm2baq"]
 
 [ext_resource type="Texture2D" uid="uid://c4lpyfxecid6n" path="res://assets/desk/desk.png" id="1_1adp6"]
 [ext_resource type="PackedScene" uid="uid://ckih2qo6tacel" path="res://assets/window+outside/window.tscn" id="1_sia72"]
@@ -7,12 +7,36 @@
 [ext_resource type="Texture2D" uid="uid://d3req2cqbl2jk" path="res://assets/desk/desk_plant.png" id="4_f8vq7"]
 [ext_resource type="Texture2D" uid="uid://d0njcx0tmcypq" path="res://assets/desk/picture_frame.png" id="5_1f5ky"]
 [ext_resource type="Script" path="res://assets/desk/cam_tilt.gd" id="6_28gy6"]
+[ext_resource type="AudioStream" uid="uid://ndj2hg4w21xh" path="res://assets/audio/13-09-2024 Percussion.wav" id="8_3eqe4"]
+[ext_resource type="AudioStream" uid="uid://cou3igntd5vd1" path="res://assets/audio/13-09-2024 Piano chords mellow.wav" id="9_3jiky"]
+[ext_resource type="AudioStream" uid="uid://b76t3tgfyumq" path="res://assets/audio/13-09-2024 Piano chords.wav" id="10_3jf4n"]
+[ext_resource type="AudioStream" uid="uid://chx20x8m4m0xi" path="res://assets/audio/13-09-2024 Piano w solo.wav" id="11_uo5xy"]
+[ext_resource type="AudioStream" uid="uid://cpwuyqnhusbxm" path="res://assets/audio/13-09-2024 Synth Arp.wav" id="12_34o4p"]
+[ext_resource type="AudioStream" uid="uid://ia3l34m1m38" path="res://assets/audio/13-09-2024 synth bass.wav" id="13_pbod1"]
+[ext_resource type="AudioStream" uid="uid://nko4twbvvwxv" path="res://assets/audio/13-09-2024 Synth chords.wav" id="14_vqd7k"]
+[ext_resource type="AudioStream" uid="uid://b7c8tjrw7ltjr" path="res://assets/audio/13-09-2024 Trumpet.wav" id="15_gl50i"]
+[ext_resource type="AudioStream" uid="uid://tmhbybfqfren" path="res://assets/audio/13-09-2024 master.wav" id="16_sb50b"]
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_m8775"]
-stream_count = 3
+stream_count = 9
+stream_0/stream = ExtResource("8_3eqe4")
 stream_0/volume = 0.0
+stream_1/stream = ExtResource("9_3jiky")
 stream_1/volume = 0.0
+stream_2/stream = ExtResource("10_3jf4n")
 stream_2/volume = 0.0
+stream_3/stream = ExtResource("11_uo5xy")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("12_34o4p")
+stream_4/volume = 0.0
+stream_5/stream = ExtResource("13_pbod1")
+stream_5/volume = 0.0
+stream_6/stream = ExtResource("14_vqd7k")
+stream_6/volume = 0.0
+stream_7/stream = ExtResource("15_gl50i")
+stream_7/volume = 0.0
+stream_8/stream = ExtResource("16_sb50b")
+stream_8/volume = 0.0
 
 [node name="desk" type="Node3D"]
 
