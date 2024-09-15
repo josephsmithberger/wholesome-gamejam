@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c827t3en7cygx"
-path="res://.godot/imported/floor_wooden_r.png-8d87bdf78a092a1f25c478adbdb3c0e7.ctex"
+path="res://.godot/imported/floor_wooden_r.png-c52c08534209f3f9abee85b24c7d3a3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/3d props/floor_wooden_r.png"
-dest_files=["res://.godot/imported/floor_wooden_r.png-8d87bdf78a092a1f25c478adbdb3c0e7.ctex"]
+source_file="res://assets/3d props/3d props/floor_wooden_r.png"
+dest_files=["res://.godot/imported/floor_wooden_r.png-c52c08534209f3f9abee85b24c7d3a3f.ctex"]
 
 [params]
 

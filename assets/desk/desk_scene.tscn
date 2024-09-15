@@ -1,14 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://dv3dre4kfhpoq"]
+[gd_scene load_steps=14 format=3 uid="uid://dv3dre4kfhpoq"]
 
 [ext_resource type="PackedScene" uid="uid://dwswov2os56ep" path="res://assets/3d props/desk_3d.tscn" id="1_nmlih"]
 [ext_resource type="PackedScene" uid="uid://dc0ldkpfxql2q" path="res://assets/3d props/plant_3d.tscn" id="2_vahvc"]
 [ext_resource type="PackedScene" uid="uid://be8bvmr4tnhav" path="res://assets/3d props/window_3d.tscn" id="3_l7ipd"]
 [ext_resource type="PackedScene" uid="uid://cwanf55yidhvj" path="res://assets/3d props/lamp_3d.tscn" id="3_rjmvp"]
-[ext_resource type="Material" uid="uid://dayc5kf5754rx" path="res://assets/3d props/mat_floor.tres" id="3_w72eo"]
 [ext_resource type="Script" path="res://assets/desk/cam_tilt.gd" id="4_0ck5q"]
 [ext_resource type="Material" uid="uid://3uy2dw00ch5k" path="res://assets/3d props/mat_walls.tres" id="4_1ah4m"]
 [ext_resource type="PackedScene" uid="uid://euqv2h8ti71q" path="res://assets/3d props/picture_frame_3d.tscn" id="4_x3o8c"]
+[ext_resource type="PackedScene" uid="uid://bgve01giuriju" path="res://assets/puzzles/pickable_property.tscn" id="7_acdcq"]
 [ext_resource type="PackedScene" uid="uid://dg6mkoca4x0ir" path="res://assets/3d props/pencil_3d.tscn" id="9_bdtqu"]
+[ext_resource type="PackedScene" uid="uid://cvaeu8uyv6g10" path="res://assets/window+outside/outside/outside.tscn" id="10_1qd3i"]
 
 [sub_resource type="Environment" id="Environment_cjsaa"]
 background_mode = 1
@@ -16,20 +17,20 @@ background_color = Color(1, 0.946667, 0.68, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.94, 0.8272, 0.658, 1)
 ambient_light_energy = 0.25
+fog_enabled = true
+fog_mode = 1
+fog_light_energy = 2.09
+fog_density = 1.0
+fog_depth_curve = 1.31951
+volumetric_fog_density = 0.2079
+volumetric_fog_detail_spread = 2.61165
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_0vaov"]
-material = ExtResource("3_w72eo")
-size = Vector2(32, 16)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tiri8"]
+radius = 0.391898
+height = 3.09315
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r7pj8"]
 size = Vector2(8.605, 11.46)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38v37"]
-albedo_color = Color(0.71, 0.632373, 0.5964, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_txaal"]
-material = SubResource("StandardMaterial3D_38v37")
-size = Vector3(32, 1, 1)
 
 [node name="DeskScene" type="Node3D"]
 
@@ -37,7 +38,7 @@ size = Vector3(32, 1, 1)
 environment = SubResource("Environment_cjsaa")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.72026, 0)
+transform = Transform3D(1, 0, 0, 0, -0.988615, 0.150467, 0, -0.150467, -0.988615, 0, 1.58716, -4.58843)
 light_energy = 0.4
 
 [node name="Desk3d" parent="." instance=ExtResource("1_nmlih")]
@@ -60,18 +61,14 @@ transform = Transform3D(0.994598, 0.066721, 0.079515, 0, 0.766045, -0.642788, -0
 [node name="Window3d" parent="." instance=ExtResource("3_l7ipd")]
 transform = Transform3D(1, 0, 0, 0, 0.642788, -0.766044, 0, 0.766044, 0.642788, -0.0849773, 0, -5.79018)
 
-[node name="Pencil3d" parent="." instance=ExtResource("9_bdtqu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86963, 0.196, 0.844447)
+[node name="pickable_property" parent="." instance=ExtResource("7_acdcq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21735, 0.131698, 2.10029)
 
-[node name="Pencil3d2" parent="." instance=ExtResource("9_bdtqu")]
-transform = Transform3D(0.747044, 0, -0.664774, 0, 1, 0, 0.664774, 0, 0.747044, -1.53203, 0.196, 0.80656)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pickable_property"]
+transform = Transform3D(0.733433, 0.679274, -0.025727, -1.68794e-09, 0.0378471, 0.999284, 0.679761, -0.732908, 0.0277584, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_tiri8")
 
-[node name="Pencil3d3" parent="." instance=ExtResource("9_bdtqu")]
-transform = Transform3D(0.375205, 0, -0.926942, 0, 1, 0, 0.926942, 0, 0.375205, 0.0061003, 0.196, -0.386872)
-
-[node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.31163, 2.49397)
-mesh = SubResource("PlaneMesh_0vaov")
+[node name="Pencil3d" parent="pickable_property" instance=ExtResource("9_bdtqu")]
 
 [node name="wall_r" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.642788, -0.766044, 0, 0.766044, 0.642788, 9.70302, 0.000394996, -5.90016)
@@ -83,12 +80,11 @@ transform = Transform3D(1, 0, 0, 0, 0.642788, -0.766044, 0, 0.766044, 0.642788, 
 material_override = ExtResource("4_1ah4m")
 mesh = SubResource("PlaneMesh_r7pj8")
 
-[node name="wall trim" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.774072, -0.633097, 0, 0.633097, 0.774072, 0, -4.32405, -2.23713)
-mesh = SubResource("BoxMesh_txaal")
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 12.0043, 5.14528)
 fov = 44.2
 script = ExtResource("4_0ck5q")
 intensity = 0.001
+
+[node name="outside" parent="." instance=ExtResource("10_1qd3i")]
+transform = Transform3D(1, 0, 0, 0, 0.695587, 0.718442, 0, -0.718442, 0.695587, 0.5, -28, -30)

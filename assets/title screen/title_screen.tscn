@@ -67,7 +67,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Mike"
-uri = "https://cohost.org/MikeWake?page=0"
+uri = "https://peoplemaking.games/@wake"
 
 [node name="gzab" type="LinkButton" parent="CenterContainer2/HBoxContainer"]
 layout_mode = 2

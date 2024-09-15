@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjjj5lv0sktij"
-path="res://.godot/imported/desk_r.png-b382ffbed0f52fb3c37f2f9934244a5e.ctex"
+uid="uid://cemd0umanrrwu"
+path.s3tc="res://.godot/imported/Untitled-1_0003_Untitled_Artwork-11.png-b4ead1fff9402ce966fb235f688cf990.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/3d props/3d props/desk_r.png"
-dest_files=["res://.godot/imported/desk_r.png-b382ffbed0f52fb3c37f2f9934244a5e.ctex"]
+source_file="res://assets/window+outside/outside/Untitled-1_0003_Untitled_Artwork-11.png"
+dest_files=["res://.godot/imported/Untitled-1_0003_Untitled_Artwork-11.png-b4ead1fff9402ce966fb235f688cf990.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

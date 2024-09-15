@@ -1,3 +1,32 @@
-res://assets/desk/desk.tscn::a63c57fe1ce3e8db79b2577f53008fc7::1726319945::res://.godot/exported/133200997/export-8af84698fffc398a0193ce99c200e7ec-desk.scn
-res://assets/title screen/title_screen.tscn::e63f34d42382840f799b449ac39ca1cf::1726319945::res://.godot/exported/133200997/export-5f55c6747b5e108eeda97449897ea896-title_screen.scn
+res://assets/title screen/title_screen.tscn::a6fdb1b3a63e7199d4f48ca0f97d175f::1726362718::res://.godot/exported/133200997/export-5f55c6747b5e108eeda97449897ea896-title_screen.scn
 res://assets/window+outside/window.tscn::45d9d0d6b385c253c00437650a8b70f8::1726319873::res://.godot/exported/133200997/export-5ca8b20ec64733497fd6ac2512e1082c-window.scn
+res://assets/3d props/3d props/desk_3d.tscn::e426436b917487c90a9f08aa229d0e5e::1726351523::res://.godot/exported/133200997/export-ab4977cb97d3c9bbb8b3a2c195329701-desk_3d.scn
+res://assets/3d props/3d props/lamp_3d.tscn::100d2b22486f47aba336f1533cb8f404::1726349993::res://.godot/exported/133200997/export-34f3e5836ebd084cb720cec69c6b551a-lamp_3d.scn
+res://assets/3d props/3d props/mat_desk_3d.tres::ad990efeaf6c400785b87fd196e76133::1726349993::res://.godot/exported/133200997/export-1a91e57c8ebac707923e8bf73e4a118d-mat_desk_3d.res
+res://assets/3d props/3d props/mat_floor.tres::01880ccf4e9fa556e656f52fba7cde03::1726349993::res://.godot/exported/133200997/export-0f0f50812609e272902e1493644ff3ee-mat_floor.res
+res://assets/3d props/3d props/mat_pencil_3d.tres::58cc8c1ba3cfc684d777c7d4fd12d833::1726349993::res://.godot/exported/133200997/export-66d137dd490aaac8817fab6540b264a4-mat_pencil_3d.res
+res://assets/3d props/3d props/mat_picture_frame_3d.tres::8322becd55c102c8063a5ea3254bcdf1::1726349993::res://.godot/exported/133200997/export-04dbc979787c86f3de719e6c146748ed-mat_picture_frame_3d.res
+res://assets/3d props/3d props/mat_plant3d.tres::f276eb217af93fcfdcb186142b1045ca::1726349993::res://.godot/exported/133200997/export-48a9b15a7c01caca2cc506e3f30d3844-mat_plant3d.res
+res://assets/3d props/3d props/mat_walls.tres::033cc38d4895d981a4558f6b07da621a::1726349993::res://.godot/exported/133200997/export-7ca0a9626f0bcc539a53033fe9a6b48b-mat_walls.res
+res://assets/3d props/3d props/mat_window3d.tres::7fc7b958570f4b7b72a5338f4577f323::1726349993::res://.godot/exported/133200997/export-70f76e3319db0c406a3aa35a16269a1c-mat_window3d.res
+res://assets/3d props/3d props/pencil_3d.tscn::f6bdef2d1c6fba78a6d39458d016687d::1726349993::res://.godot/exported/133200997/export-ff20b13c67baa04d7942e5e0fc68bcfd-pencil_3d.scn
+res://assets/3d props/3d props/picture_frame_3d.tscn::49291db1aafd0c70a7ca7dfa4d0eafa3::1726349993::res://.godot/exported/133200997/export-b94ebddbaf5f0456ae8ab4ac6a4918bc-picture_frame_3d.scn
+res://assets/3d props/3d props/plant_3d.tscn::8fc819757dadb46f93076c19f783306f::1726349993::res://.godot/exported/133200997/export-492d04f0ca3185195d7dbdd0edcf27a2-plant_3d.scn
+res://assets/3d props/3d props/window_3d.tscn::fa82e5d81a65258ab3c33a298334f042::1726349993::res://.godot/exported/133200997/export-dbdd71c7ae141ae41d9f0ea900442687-window_3d.scn
+res://assets/3d props/desk_3d.tscn::e426436b917487c90a9f08aa229d0e5e::1726349993::res://.godot/exported/133200997/export-563f3dd1b4fa21b9cd8791fb5ce1803d-desk_3d.scn
+res://assets/3d props/lamp_3d.tscn::100d2b22486f47aba336f1533cb8f404::1726349993::res://.godot/exported/133200997/export-ca4cce1b73c0cad67aa09aebaec17992-lamp_3d.scn
+res://assets/3d props/mat_desk_3d.tres::ad990efeaf6c400785b87fd196e76133::1726349993::res://.godot/exported/133200997/export-41014b18dc7d04605d678814ebe3d08a-mat_desk_3d.res
+res://assets/3d props/mat_floor.tres::01880ccf4e9fa556e656f52fba7cde03::1726349993::res://.godot/exported/133200997/export-8d23222dc1041574235fdbee30fab38e-mat_floor.res
+res://assets/3d props/mat_pencil_3d.tres::58cc8c1ba3cfc684d777c7d4fd12d833::1726349993::res://.godot/exported/133200997/export-dcf04396a840e32095118c01c624097a-mat_pencil_3d.res
+res://assets/3d props/mat_picture_frame_3d.tres::8322becd55c102c8063a5ea3254bcdf1::1726349993::res://.godot/exported/133200997/export-500883568bed3572c9538f93d6df9512-mat_picture_frame_3d.res
+res://assets/3d props/mat_plant3d.tres::f276eb217af93fcfdcb186142b1045ca::1726349993::res://.godot/exported/133200997/export-7503aa364f271d0fb5e08ff814bdec5f-mat_plant3d.res
+res://assets/3d props/mat_walls.tres::4925110c80a5004d0562b64324ce224f::1726358892::res://.godot/exported/133200997/export-2188fa0408c6f1287f42bca059bfd8ae-mat_walls.res
+res://assets/3d props/mat_window3d.tres::7fc7b958570f4b7b72a5338f4577f323::1726349993::res://.godot/exported/133200997/export-cfde434e9051040325f9b3fbc0f28516-mat_window3d.res
+res://assets/3d props/pencil_3d.tscn::f6bdef2d1c6fba78a6d39458d016687d::1726349993::res://.godot/exported/133200997/export-1160ba42694af86369636c95a0367457-pencil_3d.scn
+res://assets/3d props/picture_frame_3d.tscn::49291db1aafd0c70a7ca7dfa4d0eafa3::1726349993::res://.godot/exported/133200997/export-f5850f3e10b38c8804cd61c23bca2362-picture_frame_3d.scn
+res://assets/3d props/plant_3d.tscn::8fc819757dadb46f93076c19f783306f::1726349993::res://.godot/exported/133200997/export-a74e79feff553723d3df871ea344aba4-plant_3d.scn
+res://assets/3d props/window_3d.tscn::fa82e5d81a65258ab3c33a298334f042::1726349993::res://.godot/exported/133200997/export-3801f46313a0cfb4821469409d89a558-window_3d.scn
+res://assets/puzzles/pickable_property.tscn::3635ffa169473ae06c6e5313245c6df5::1726362718::res://.godot/exported/133200997/export-77c0af7482d083b89067bb2869a6c0df-pickable_property.scn
+res://assets/desk/desk_scene.tscn::91df7407e39ed2a0342eb69fb3a3b237::1726362718::res://.godot/exported/133200997/export-40c747fad415f5ac5bb6297a756a57fb-desk_scene.scn
+res://assets/window+outside/outside/outside.tscn::f1ba85e84d140a3cc7919fbf4d6d73b1::1726359590::res://.godot/exported/133200997/export-befc2b83f302dadd1494bfadc87baf9f-outside.scn
+res://default_bus_layout.tres::f5d2e14cc9171e1e4d8b5639691cc76a::1726358873::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
