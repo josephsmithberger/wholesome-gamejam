@@ -1,8 +1,7 @@
 res://default_bus_layout.tres
-res://assets/desk/desk_scene.tscn
+res://assets/desk/pets/pet.tscn
 res://assets/3d props/mat_walls.tres
 res://assets/desk/tilt.gdshader
 res://assets/title screen/title_screen.tscn
-res://assets/window+outside/outside/outside.tscn
-res://assets/puzzles/pickable_property.gd
-res://assets/puzzles/pickable_property.tscn
+res://assets/desk/desk_scene.tscn
+res://assets/3d props/picture_frame_3d.tscn

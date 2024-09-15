@@ -1,12 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://euqv2h8ti71q"]
+[gd_scene load_steps=5 format=3 uid="uid://euqv2h8ti71q"]
 
 [ext_resource type="Material" uid="uid://cbgib4pk6tshu" path="res://assets/3d props/mat_picture_frame_3d.tres" id="1_lmlvf"]
+[ext_resource type="PackedScene" uid="uid://cr85s6cr06jme" path="res://assets/desk/pets/pet.tscn" id="2_swlax"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3v344"]
 material = ExtResource("1_lmlvf")
 size = Vector2(3.8, 3)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_7pjwx"]
+viewport_path = NodePath("SubViewport")
+
 [node name="PictureFrame3d" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_3v344")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(702, 532)
+render_target_update_mode = 4
+
+[node name="pet" parent="SubViewport" instance=ExtResource("2_swlax")]
+scale = Vector2(0.08, 0.08)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.93, -1.40426e-07, 6.13822e-15, 0, -4.06516e-08, -0.93, 1.40426e-07, -0.93, 4.06516e-08, 2.28651, 0.019549, -1.32212)
+modulate = Color(1, 1, 1, 0.803922)
+texture = SubResource("ViewportTexture_7pjwx")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr85s6cr06jme"]
+
+[ext_resource type="Script" path="res://assets/desk/pets/pet.gd" id="2_7evhe"]
+[ext_resource type="Texture2D" uid="uid://yygii0h7sa3n" path="res://assets/photo_mask.png" id="2_y0ofj"]
+[ext_resource type="Texture2D" uid="uid://20ocddplj5al" path="res://assets/desk/pets/winnie.jpg" id="3_bw3i6"]
+
+[node name="PhotoMask" type="Sprite2D"]
+clip_children = 1
+position = Vector2(579, 405)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_y0ofj")
+script = ExtResource("2_7evhe")
+
+[node name="Winnie" type="Sprite2D" parent="."]
+position = Vector2(-36.6667, 213.333)
+scale = Vector2(3.33333, 3.33333)
+texture = ExtResource("3_bw3i6")
