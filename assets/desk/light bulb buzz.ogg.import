@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://lmow7aormj27"
+path="res://.godot/imported/light bulb buzz.ogg-3c42cd6d48e9fdef80d3c639adf08e6d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/desk/light bulb buzz.ogg"
+dest_files=["res://.godot/imported/light bulb buzz.ogg-3c42cd6d48e9fdef80d3c639adf08e6d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

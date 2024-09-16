@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgve01giuriju"]
+[gd_scene load_steps=3 format=3 uid="uid://bgve01giuriju"]
 
 [ext_resource type="Script" path="res://assets/puzzles/pickable_property.gd" id="1_in4ro"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iw1hu"]
+size = Vector3(1.31567, 0.650391, 1.27521)
 
 [node name="pickable_property" type="Area3D"]
 input_capture_on_drag = true
 script = ExtResource("1_in4ro")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.030399, -0.999538, 0, 0.999538, -0.030399, 0.116953, 0.274155, 0.0249942)
+shape = SubResource("BoxShape3D_iw1hu")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

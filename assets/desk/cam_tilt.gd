@@ -9,6 +9,8 @@ var target_rotation: Vector3
 func _ready():
 	original_rotation = rotation_degrees
 	target_rotation = rotation_degrees
+	$"../AnimationPlayer".play("flicker")
+	$"../OmniLight3D/AudioStreamPlayer3D".play()
 
 func _process(delta):
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -22,3 +24,7 @@ func _process(delta):
 	rotation_degrees.x = lerp_angle(rotation_degrees.x, target_rotation.x, delta * ease_speed)
 	rotation_degrees.y = lerp_angle(rotation_degrees.y, target_rotation.y, delta * ease_speed)
 	rotation_degrees.z = lerp_angle(rotation_degrees.z, target_rotation.z, delta * ease_speed)
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$"../AnimationPlayer".speed_scale = randi_range(0.1,20)

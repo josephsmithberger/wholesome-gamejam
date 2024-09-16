@@ -1,0 +1,194 @@
+[gd_scene load_steps=18 format=3 uid="uid://o0y5emd42oyg"]
+
+[ext_resource type="PackedScene" uid="uid://bgve01giuriju" path="res://assets/puzzles/pickable_property.tscn" id="1_i63ao"]
+[ext_resource type="Texture2D" uid="uid://ldgvljxuisfx" path="res://assets/puzzles/IMG_1330_0001_Layer-2.png" id="2_hj71h"]
+[ext_resource type="Texture2D" uid="uid://mkppks18aa7h" path="res://assets/puzzles/IMG_1330_0002_Layer-3.png" id="3_q0avp"]
+[ext_resource type="Texture2D" uid="uid://dx4j3urtnkhtt" path="res://assets/puzzles/IMG_1330_0003_Layer-4.png" id="4_3unsk"]
+[ext_resource type="Texture2D" uid="uid://cvtmadnttmwvg" path="res://assets/puzzles/IMG_1330_0004_Layer-6.png" id="5_mr5de"]
+[ext_resource type="Texture2D" uid="uid://dsqsap5v0u4fg" path="res://assets/puzzles/IMG_1330_0005_Layer-7.png" id="6_5fn6o"]
+[ext_resource type="Texture2D" uid="uid://cfve3h4vp0530" path="res://assets/puzzles/IMG_1330_0006_Layer-8.png" id="7_q6ibg"]
+[ext_resource type="Texture2D" uid="uid://di0dserfpbcmr" path="res://assets/puzzles/IMG_1330_0007_Layer-9.png" id="8_07do7"]
+[ext_resource type="Texture2D" uid="uid://urhlps5nywkq" path="res://assets/puzzles/IMG_1330_0008_Layer-16.png" id="9_27f3p"]
+[ext_resource type="Texture2D" uid="uid://ccgc2yla3ptnh" path="res://assets/puzzles/IMG_1330_0009_Layer-10.png" id="10_ifo8f"]
+[ext_resource type="Texture2D" uid="uid://dicnagci06yvf" path="res://assets/puzzles/IMG_1330_0010_Layer-11.png" id="11_envyp"]
+[ext_resource type="Texture2D" uid="uid://ce842uolksbuq" path="res://assets/puzzles/IMG_1330_0011_Layer-12.png" id="12_8nob6"]
+[ext_resource type="Texture2D" uid="uid://cbkboaji1srqt" path="res://assets/puzzles/IMG_1330_0012_Layer-13.png" id="13_ikf1c"]
+[ext_resource type="Texture2D" uid="uid://cutjjs1tu8e7s" path="res://assets/puzzles/IMG_1330_0013_Layer-14.png" id="14_c8vhj"]
+[ext_resource type="Texture2D" uid="uid://b5nv6mx27h7dv" path="res://assets/puzzles/IMG_1330_0014_Layer-15.png" id="15_bt2li"]
+[ext_resource type="Texture2D" uid="uid://gexofa1hs7s8" path="res://assets/puzzles/IMG_1330_0015_Layer-0.png" id="16_4snef"]
+
+[sub_resource type="GDScript" id="GDScript_8gtwx"]
+script/source = "extends Area3D
+
+var is_held: bool = false
+var last_position: Vector3 = Vector3()
+
+func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				is_held = true
+				last_position = position  # Store the current position
+			else:
+				is_held = false
+				# Return to the last position if the z position is less than -3
+				if position.z < -3:
+					position = last_position
+
+func _process(delta: float) -> void:
+	if is_held:
+		var mouse_pos = get_viewport().get_mouse_position()
+
+		# Get the camera
+		var camera = get_viewport().get_camera_3d()
+
+		# Project the mouse position onto a 3D ray
+		var ray_origin = camera.project_ray_origin(mouse_pos)
+		var ray_direction = camera.project_ray_normal(mouse_pos)
+
+		# Find the intersection with a horizontal plane (XZ plane at the object's current Y position)
+		var intersection_y = position.y  # Keep object's current Y position
+		var t = (intersection_y - ray_origin.y) / ray_direction.y  # Solve for t to find the intersection point
+		
+		# Update the position while held
+		position.x = ray_origin.x + ray_direction.x * t
+		position.z = ray_origin.z + ray_direction.z * t
+		# Keep the Y position fixed to simulate movement in a flat plane
+"
+
+[node name="puzzle" type="Node3D"]
+
+[node name="pickable_property" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.13697, -0.0703374, -0.0820169)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205399, 1.49012e-08)
+sorting_offset = 2.0
+texture = ExtResource("2_hj71h")
+
+[node name="pickable_property2" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.26973, -0.0703374, -1.38742)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property2"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.10543e-15, 0, 7.10543e-15, 1, 0.30614, 0.0721011, 7.45058e-09)
+sorting_offset = 2.0
+texture = ExtResource("3_q0avp")
+
+[node name="pickable_property3" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.862136, -0.0703374, -0.0820169)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property3"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.149185, 0.333718, 1.49012e-08)
+sorting_offset = 2.0
+texture = ExtResource("4_3unsk")
+
+[node name="pickable_property4" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.14741, -0.0703374, -0.0820169)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property4"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.261517, 0.253558, 1.49012e-08)
+sorting_offset = 2.0
+texture = ExtResource("5_mr5de")
+
+[node name="pickable_property5" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.95982, -0.0703374, -0.0820169)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property5"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.0866961, 0.410788, 2.98023e-08)
+sorting_offset = 2.0
+texture = ExtResource("6_5fn6o")
+
+[node name="pickable_property6" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.26973, -0.0703374, -0.0820169)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property6"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.129796, 0.0921187, 7.45058e-09)
+sorting_offset = 2.0
+texture = ExtResource("7_q6ibg")
+
+[node name="pickable_property7" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.26973, -0.0703374, -3.08758)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property7"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.134126, 0.392626, 1.49012e-08)
+sorting_offset = 2.0
+texture = ExtResource("8_07do7")
+
+[node name="pickable_property8" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.94951, -0.0703374, -3.08758)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property8"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.00238347, 0.245567, 1.49012e-08)
+sorting_offset = 2.0
+texture = ExtResource("9_27f3p")
+
+[node name="pickable_property9" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.12315, -0.0703374, 2.83904)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property9"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, -0.0427439, 0.618653, 2.98023e-08)
+sorting_offset = 2.0
+texture = ExtResource("10_ifo8f")
+
+[node name="pickable_property10" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.65743, -0.0703374, 2.83904)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property10"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.198075, 0.235257, 1.49012e-08)
+sorting_offset = 2.0
+texture = ExtResource("11_envyp")
+
+[node name="pickable_property11" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.80622, -0.0703374, -3.15673)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property11"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.040987, 0.228356, 7.45058e-09)
+sorting_offset = 2.0
+texture = ExtResource("12_8nob6")
+
+[node name="pickable_property12" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.36187, -0.0703374, 2.49862)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property12"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.0986309, 0, 0)
+sorting_offset = 2.0
+texture = ExtResource("13_ikf1c")
+
+[node name="pickable_property13" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.86042, -0.0703374, -2.51771)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property13"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, -0.14595, 0, 0)
+sorting_offset = 2.0
+texture = ExtResource("14_c8vhj")
+
+[node name="pickable_property14" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.44726, -0.0703374, -2.92206)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property14"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.0789316, 0.00887251, 0)
+sorting_offset = 2.0
+texture = ExtResource("15_bt2li")
+
+[node name="pickable_property15" parent="." instance=ExtResource("1_i63ao")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.66351, -0.0703374, 2.44522)
+script = SubResource("GDScript_8gtwx")
+
+[node name="Sprite3D" type="Sprite3D" parent="pickable_property15"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0.351079, 0.608088, 7.45058e-09)
+sorting_offset = 2.0
+texture = ExtResource("16_4snef")

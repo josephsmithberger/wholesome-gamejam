@@ -25,6 +25,6 @@ render_target_update_mode = 4
 scale = Vector2(0.08, 0.08)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-0.93, -1.40426e-07, 6.13822e-15, 0, -4.06516e-08, -0.93, 1.40426e-07, -0.93, 4.06516e-08, 2.28651, 0.019549, -1.32212)
+transform = Transform3D(-0.93, -1.40426e-07, 6.13822e-15, 0, -4.06516e-08, -0.93, 1.40426e-07, -0.93, 4.06516e-08, 2.27887, 0.00171095, -1.31445)
 modulate = Color(1, 1, 1, 0.803922)
 texture = SubResource("ViewportTexture_7pjwx")

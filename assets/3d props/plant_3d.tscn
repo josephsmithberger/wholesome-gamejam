@@ -1,13 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc0ldkpfxql2q"]
+[gd_scene load_steps=10 format=3 uid="uid://dc0ldkpfxql2q"]
 
-[ext_resource type="Material" uid="uid://cmlgxld73c4gb" path="res://assets/3d props/mat_plant3d.tres" id="1_rp6v7"]
+[ext_resource type="Texture2D" uid="uid://c832v5sppwibx" path="res://assets/desk/desk_plant_0001_Layer-2.png" id="1_t7at4"]
+[ext_resource type="Texture2D" uid="uid://b1u4vu5q8qwaf" path="res://assets/3d props/desk_plant_n.png" id="2_ckv4b"]
+[ext_resource type="Texture2D" uid="uid://4edqjbgt84m6" path="res://assets/desk/desk_plant_0000_Layer-1.png" id="3_k2xku"]
+[ext_resource type="Shader" path="res://assets/3d props/plant_3d.gdshader" id="3_xsh5p"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_oeu37"]
-material = ExtResource("1_rp6v7")
-size = Vector2(2.25, 3)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqdql"]
+transparency = 1
+albedo_texture = ExtResource("1_t7at4")
+normal_scale = 0.0
+normal_texture = ExtResource("2_ckv4b")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_41slp"]
+material = SubResource("StandardMaterial3D_qqdql")
+
+[sub_resource type="Gradient" id="Gradient_ks1ws"]
+offsets = PackedFloat32Array(0, 0.446721)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cd22e"]
+gradient = SubResource("Gradient_ks1ws")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e57so"]
+render_priority = 0
+shader = ExtResource("3_xsh5p")
+shader_parameter/sway_strength = 0.191
+shader_parameter/sway_speed = 1.0
+shader_parameter/sway_frequency = 3.0
+shader_parameter/albedo_texture = ExtResource("3_k2xku")
+shader_parameter/gradient_texture = SubResource("GradientTexture1D_cd22e")
 
 [node name="Plant3d" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_oeu37")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0886475)
+mesh = SubResource("PlaneMesh_41slp")
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -0.0320213, 0.999487, 0, -0.999487, -0.0320213, 0, 0.247713, -0.331906)
+sorting_offset = 1.0
+material_overlay = SubResource("ShaderMaterial_e57so")
+cast_shadow = 0
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_k2xku")

@@ -1,7 +1,5 @@
 res://default_bus_layout.tres
-res://assets/desk/pets/pet.tscn
-res://assets/3d props/mat_walls.tres
-res://assets/desk/tilt.gdshader
 res://assets/title screen/title_screen.tscn
-res://assets/desk/desk_scene.tscn
-res://assets/3d props/picture_frame_3d.tscn
+res://assets/desk/tilt.gdshader
+res://assets/3d props/plant_3d.gdshader
+res://assets/desk/button.gdshader
